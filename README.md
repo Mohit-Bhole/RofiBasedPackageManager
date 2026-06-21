@@ -75,6 +75,12 @@ chmod +x GuiPackageManager.py
 ./GuiPackageManager.py
 ```
 
+or
+
+```bash
+PackageManager
+```
+
 ## Roadmap
 
 ### v0.2
