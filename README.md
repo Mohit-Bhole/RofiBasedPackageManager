@@ -1,12 +1,24 @@
-# RofiBasedPackageManager
+<div align="center">
 
-A lightweight package manager frontend for Arch Linux built with **Python** and **Rofi**.
+# 📦 RofiBasedPackageManager
 
-RofiBasedPackageManager provides a simple menu-driven interface for viewing and managing packages installed through different package managers without opening a terminal.
+### Lightweight Package Management for Arch Linux using Python + Rofi
 
-## Features (v0.1)
+View, search, and manage packages installed through **Pacman**, **AUR Helpers**, and **Flatpak** from a fast keyboard-driven interface.
 
-### Pacman
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)
+![Arch Linux](https://img.shields.io/badge/Arch-Linux-1793D1?style=for-the-badge\&logo=arch-linux)
+![Rofi](https://img.shields.io/badge/Rofi-Frontend-green?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-v0.1-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge)
+
+</div>
+
+---
+
+## ✨ Features
+
+### 📦 Pacman
 
 * View all installed packages
 * View explicitly installed packages
@@ -15,30 +27,43 @@ RofiBasedPackageManager provides a simple menu-driven interface for viewing and 
 * Check official repository updates
 * Check AUR updates
 
-### Flatpak
+### 📦 Flatpak
 
 * View installed Flatpak applications
-* Check available Flatpak updates
+* Check Flatpak updates
 
-### Interface
+### ⌨️ Interface
 
 * Fast Rofi-based navigation
-* Keyboard-driven workflow
-* Lightweight and minimal dependencies
+* Fully keyboard driven
+* Lightweight
+* No heavy GUI dependencies
 
-## Screenshots
+---
 
-*Screenshots coming soon.*
+## 📸 Screenshots
 
-## Requirements
+### Main Menu
 
-* Python 3
-* Rofi
-* Pacman
-* Yay (for AUR update checking)
-* Flatpak (optional)
+<p align="center">
+  <img src="./Screenshots/2026-06-21_19-25-49.png" width="80%">
+</p>
 
-## Installation
+### Pacman Menu
+
+<p align="center">
+  <img src="./Screenshots/2026-06-21_19-26-08.png" width="80%">
+</p>
+
+### Package Listing
+
+<p align="center">
+  <img src="./Screenshots/2026-06-21_19-26-25.png" width="80%">
+</p>
+
+---
+
+## 🚀 Installation
 
 Clone the repository:
 
@@ -47,7 +72,7 @@ git clone https://github.com/Mohit-Bhole/RofiBasedPackageManager.git
 cd RofiBasedPackageManager
 ```
 
-Make the setup script executable:
+Run setup:
 
 ```bash
 chmod +x setup.sh
@@ -57,37 +82,41 @@ sudo ./setup.sh
 Or install dependencies manually:
 
 ```bash
-sudo pacman -S rofi python
+sudo pacman -S python rofi
 ```
 
-## Usage
+Optional:
+
+```bash
+sudo pacman -S flatpak
+yay -S yay
+```
+
+---
+
+## ▶️ Usage
 
 Run:
-
-```bash
-python GuiPackageManager.py
-```
-
-or
-
-```bash
-chmod +x GuiPackageManager.py
-./GuiPackageManager.py
-```
-
-or
 
 ```bash
 PackageViewer
 ```
 
-## Roadmap
+or
+
+```bash
+python GuiPackageManager.py
+```
+
+---
+
+## 🗺️ Roadmap
 
 ### v0.2
 
 * Package information viewer
-* Display package metadata using `pacman -Qi`
-* View package versions and installation details
+* Package metadata using `pacman -Qi`
+* Installation source detection
 
 ### v0.3
 
@@ -101,19 +130,21 @@ PackageViewer
 * Package reinstall support
 * Confirmation dialogs
 
-### Future Goals
+### Future
 
-* Support for Paru
-* Support for Snap packages
+* Paru support
+* Snap support
 * Search functionality
 * Package statistics dashboard
-* Installation source detection
 * Package size analysis
-* GUI package management actions
+* Theme system
+* QML frontend
 
-## Project Goal
+---
 
-The long-term goal of this project is to provide a lightweight Arch Linux package management interface capable of managing packages installed through:
+## 🎯 Project Vision
+
+RofiBasedPackageManager aims to become a lightweight package management frontend capable of managing packages installed through:
 
 * Pacman
 * Yay
@@ -121,8 +152,23 @@ The long-term goal of this project is to provide a lightweight Arch Linux packag
 * Flatpak
 * Snap
 
-while keeping the speed and simplicity of Rofi.
-(In future the project will use QML for other Desktop environments(Gnome, Kde plasma, Cinnamon, XFCE etc) and OS support... i.e. Fedora, Mint, Debian etc)
-## License
+while preserving the speed and simplicity of Rofi.
 
-This project is licensed under the MIT License.
+Future versions may include a QML frontend for desktop environments such as:
+
+* KDE Plasma
+* GNOME
+* XFCE
+* Cinnamon
+
+and support for distributions such as:
+
+* Fedora
+* Debian
+* Linux Mint
+
+---
+
+## 📄 License
+
+Released under the MIT License.
