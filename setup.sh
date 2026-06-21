@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 pacman -S rofi
-cp PackageViewer.py /bin
+cp GuiPackageManager.py /bin
 cd /bin
-mv PackageViewer.py PackageViewer
+mv GuiPackageManager.py PackageViewer
 chmod +x PackageViewer
+#needs sudo
