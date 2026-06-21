@@ -1,3 +1,6 @@
 #!/usr/bin/bash
-
-sudo pacman -S rofi python
+pacman -S rofi
+cp PackageViewer.py /bin
+cd /bin
+mv PackageViewer.py PackageViewer
+chmod +x PackageViewer
