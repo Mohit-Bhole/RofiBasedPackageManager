@@ -78,7 +78,7 @@ chmod +x GuiPackageManager.py
 or
 
 ```bash
-PackageManager
+PackageViewer
 ```
 
 ## Roadmap
