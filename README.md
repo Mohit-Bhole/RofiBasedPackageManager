@@ -51,7 +51,7 @@ Make the setup script executable:
 
 ```bash
 chmod +x setup.sh
-./setup.sh
+sudo ./setup.sh
 ```
 
 Or install dependencies manually:
