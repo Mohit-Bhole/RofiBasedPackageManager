@@ -55,7 +55,7 @@ View, search, and manage packages installed through **Pacman**, **AUR Helpers**,
   <img src="./Screenshots/2026-06-21_19-26-08.png" width="80%">
 </p>
 
-### Package Listing
+### AUR Package Listing
 
 <p align="center">
   <img src="./Screenshots/2026-06-21_19-26-25.png" width="80%">
