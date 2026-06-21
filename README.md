@@ -116,7 +116,7 @@ The long-term goal of this project is to provide a lightweight Arch Linux packag
 * Snap
 
 while keeping the speed and simplicity of Rofi.
-
+(In future the project will use QML for other Desktop environments(Gnome, Kde plasma, Cinnamon, XFCE etc) and OS support... i.e. Fedora, Mint, Debian etc)
 ## License
 
 This project is licensed under the MIT License.
