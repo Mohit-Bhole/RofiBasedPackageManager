@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
 import subprocess
+import sys
 
 
 def rofi_menu(options, prompt):
 
     result = subprocess.run(
         ["rofi", "-dmenu", "-p", prompt],
-        input=options,
+        input="\n".join(options),
         capture_output=True,
         text=True
     )
@@ -15,183 +16,180 @@ def rofi_menu(options, prompt):
     return result.stdout.strip()
 
 
-# ==========================
-# MAIN MENU
-# ==========================
+while True:
 
-package_manager = rofi_menu(
-    "Pacman\nFlatpak",
-    "Choose Package Manager"
-)
-
-# ==========================
-# PACMAN
-# ==========================
-
-if package_manager.lower() == "pacman":
-
-    pacman_options = (
-        "See All Packages\n"
-        "See Explicit Packages\n"
-        "See Dependency Packages\n"
-        "See Orphans\n"
-        "Check Official Updates\n"
-        "Check AUR Updates"
+    main_choice = rofi_menu(
+        [
+            "Pacman",
+            "Flatpak",
+            "Exit"
+        ],
+        "Package Manager"
     )
 
-    choice = rofi_menu(
-        pacman_options,
-        "Pacman"
-    )
+    if main_choice in ["", "Exit"]:
+        sys.exit()
 
-    # ----------------------
-    # All packages
-    # ----------------------
+    # =====================
+    # PACMAN MENU
+    # =====================
 
-    if choice == "See All Packages":
+    if main_choice == "Pacman":
 
-        packages = subprocess.run(
-            ["pacman", "-Qq"],
-            capture_output=True,
-            text=True
-        )
+        while True:
 
-        rofi_menu(
-            packages.stdout,
-            "All Packages"
-        )
+            pacman_choice = rofi_menu(
+                [
+                    "← Back",
+                    "See All Packages",
+                    "See Explicit Packages",
+                    "See Dependency Packages",
+                    "See Orphans",
+                    "Check Official Updates",
+                    "Check AUR Updates",
+                    "Exit"
+                ],
+                "Pacman"
+            )
 
-    # ----------------------
-    # Explicit packages
-    # ----------------------
+            if pacman_choice in ["", "Exit"]:
+                sys.exit()
 
-    elif choice == "See Explicit Packages":
+            if pacman_choice == "← Back":
+                break
 
-        packages = subprocess.run(
-            ["pacman", "-Qeq"],
-            capture_output=True,
-            text=True
-        )
+            elif pacman_choice == "See All Packages":
 
-        rofi_menu(
-            packages.stdout,
-            "Explicit Packages"
-        )
+                packages = subprocess.run(
+                    ["pacman", "-Qq"],
+                    capture_output=True,
+                    text=True
+                )
 
-    # ----------------------
-    # Dependency packages
-    # ----------------------
+                rofi_menu(
+                    ["← Back"] +
+                    packages.stdout.splitlines(),
+                    "All Packages"
+                )
 
-    elif choice == "See Dependency Packages":
+            elif pacman_choice == "See Explicit Packages":
 
-        packages = subprocess.run(
-            ["pacman", "-Qdq"],
-            capture_output=True,
-            text=True
-        )
+                packages = subprocess.run(
+                    ["pacman", "-Qeq"],
+                    capture_output=True,
+                    text=True
+                )
 
-        rofi_menu(
-            packages.stdout,
-            "Dependencies"
-        )
+                rofi_menu(
+                    ["← Back"] +
+                    packages.stdout.splitlines(),
+                    "Explicit Packages"
+                )
 
-    # ----------------------
-    # Orphans
-    # ----------------------
+            elif pacman_choice == "See Dependency Packages":
 
-    elif choice == "See Orphans":
+                packages = subprocess.run(
+                    ["pacman", "-Qdq"],
+                    capture_output=True,
+                    text=True
+                )
 
-        packages = subprocess.run(
-            ["pacman", "-Qdtq"],
-            capture_output=True,
-            text=True
-        )
+                rofi_menu(
+                    ["← Back"] +
+                    packages.stdout.splitlines(),
+                    "Dependencies"
+                )
 
-        rofi_menu(
-            packages.stdout,
-            "Orphans"
-        )
+            elif pacman_choice == "See Orphans":
 
-    # ----------------------
-    # Official Updates
-    # ----------------------
+                packages = subprocess.run(
+                    ["pacman", "-Qdtq"],
+                    capture_output=True,
+                    text=True
+                )
 
-    elif choice == "Check Official Updates":
+                rofi_menu(
+                    ["← Back"] +
+                    packages.stdout.splitlines(),
+                    "Orphans"
+                )
 
-        updates = subprocess.run(
-            ["checkupdates"],
-            capture_output=True,
-            text=True
-        )
+            elif pacman_choice == "Check Official Updates":
 
-        rofi_menu(
-            updates.stdout,
-            "Official Updates"
-        )
+                updates = subprocess.run(
+                    ["checkupdates"],
+                    capture_output=True,
+                    text=True
+                )
 
-    # ----------------------
-    # AUR Updates
-    # ----------------------
+                rofi_menu(
+                    ["← Back"] +
+                    updates.stdout.splitlines(),
+                    "Official Updates"
+                )
 
-    elif choice == "Check AUR Updates":
+            elif pacman_choice == "Check AUR Updates":
 
-        updates = subprocess.run(
-            ["yay", "-Qua"],
-            capture_output=True,
-            text=True
-        )
+                updates = subprocess.run(
+                    ["yay", "-Qua"],
+                    capture_output=True,
+                    text=True
+                )
 
-        rofi_menu(
-            updates.stdout,
-            "AUR Updates"
-        )
+                rofi_menu(
+                    ["← Back"] +
+                    updates.stdout.splitlines(),
+                    "AUR Updates"
+                )
 
-# ==========================
-# FLATPAK
-# ==========================
+    # =====================
+    # FLATPAK MENU
+    # =====================
 
-elif package_manager.lower() == "flatpak":
+    elif main_choice == "Flatpak":
 
-    flatpak_options = (
-        "See Installed Flatpaks\n"
-        "Check Flatpak Updates"
-    )
+        while True:
 
-    choice = rofi_menu(
-        flatpak_options,
-        "Flatpak"
-    )
+            flatpak_choice = rofi_menu(
+                [
+                    "← Back",
+                    "See Installed Flatpaks",
+                    "Check Flatpak Updates",
+                    "Exit"
+                ],
+                "Flatpak"
+            )
 
-    # ----------------------
-    # Installed Flatpaks
-    # ----------------------
+            if flatpak_choice in ["", "Exit"]:
+                sys.exit()
 
-    if choice == "See Installed Flatpaks":
+            if flatpak_choice == "← Back":
+                break
 
-        packages = subprocess.run(
-            ["flatpak", "list", "--app"],
-            capture_output=True,
-            text=True
-        )
+            elif flatpak_choice == "See Installed Flatpaks":
 
-        rofi_menu(
-            packages.stdout,
-            "Installed Flatpaks"
-        )
+                packages = subprocess.run(
+                    ["flatpak", "list", "--app"],
+                    capture_output=True,
+                    text=True
+                )
 
-    # ----------------------
-    # Updates
-    # ----------------------
+                rofi_menu(
+                    ["← Back"] +
+                    packages.stdout.splitlines(),
+                    "Installed Flatpaks"
+                )
 
-    elif choice == "Check Flatpak Updates":
+            elif flatpak_choice == "Check Flatpak Updates":
 
-        updates = subprocess.run(
-            ["flatpak", "remote-ls", "--updates"],
-            capture_output=True,
-            text=True
-        )
+                updates = subprocess.run(
+                    ["flatpak", "remote-ls", "--updates"],
+                    capture_output=True,
+                    text=True
+                )
 
-        rofi_menu(
-            updates.stdout,
-            "Flatpak Updates"
-        )
+                rofi_menu(
+                    ["← Back"] +
+                    updates.stdout.splitlines(),
+                    "Flatpak Updates"
+                )
