@@ -1,36 +1,66 @@
 <div align="center">
 
-<h1>
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Package.png" width="60" alt="Package" />
-  <br/>
-  Rofi Package Manager
-</h1>
+<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/main_menu.png" width="700" alt="Rofi Package Manager — Main Menu"/>
 
-<p align="center">
-  <strong>A unified, terminal-free package management frontend for Arch Linux.</strong><br/>
-  Search, install, update, and remove packages from Pacman, AUR, and Flatpak — all inside Rofi.
+<h1>Rofi Package Manager</h1>
+
+<p><strong>A unified, terminal-free package management frontend for Arch Linux.</strong><br/>
+Manage Pacman, AUR, and Flatpak packages from a single keyboard-driven Rofi interface.</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Rofi-6E40C9?style=for-the-badge&logo=linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Version-1.0.0-3b82f6?style=for-the-badge"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Rofi-6E40C9?style=for-the-badge&logo=linux&logoColor=white" alt="Rofi"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License"/>
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge" alt="Version"/>
+<p>
+  <img src="https://img.shields.io/badge/Pacman-supported-00B4D8?style=flat-square"/>
+  <img src="https://img.shields.io/badge/AUR-supported-1793D1?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Flatpak-supported-4A90D9?style=flat-square"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/AUR-supported-1793D1?style=for-the-badge" alt="AUR"/>
-  <img src="https://img.shields.io/badge/Flatpak-supported-4A90D9?style=for-the-badge" alt="Flatpak"/>
-  <img src="https://img.shields.io/badge/Pacman-supported-00B4D8?style=for-the-badge" alt="Pacman"/>
-</p>
+</div>
 
-<br/>
+---
 
-<!-- SCREENSHOT PLACEHOLDER — replace with your actual screenshot -->
-<!-- ![Demo](screenshots/main_menu.png) -->
+## 📸 Screenshots
 
-<br/>
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/search.png" width="100%" alt="Package Search"/>
+<br/><sub><b>🔍 Unified Package Search</b></sub>
+</td>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/pkg_info.png" width="100%" alt="Package Info"/>
+<br/><sub><b>ℹ️ Package Info Card</b></sub>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/updates.png" width="100%" alt="Update Center"/>
+<br/><sub><b>🔄 Update Center</b></sub>
+</td>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/health.png" width="100%" alt="Health Dashboard"/>
+<br/><sub><b>🩺 Health Dashboard</b></sub>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/cleanup.png" width="100%" alt="System Cleanup"/>
+<br/><sub><b>🧹 System Cleanup</b></sub>
+</td>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/main_menu.png" width="100%" alt="Main Menu"/>
+<br/><sub><b>📦 Main Menu</b></sub>
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -40,79 +70,30 @@
 
 You launch **`rofi-package-manager`** and you get a full package management dashboard — right inside Rofi. No terminal. No typing commands. No forgetting flags.
 
-One interface to rule:
-- **Pacman** — official Arch repos
-- **AUR** — via `yay` or `paru`
-- **Flatpak** — any remote
+One interface for:
 
----
-
-## 🖥️ Screenshots
-
-> _Add your screenshots here after taking them. Suggested naming below._
-
-| Main Menu | Search Results | Package Info |
-|:---------:|:--------------:|:------------:|
-| `screenshots/main_menu.png` | `screenshots/search.png` | `screenshots/pkg_info.png` |
-
-| Health Dashboard | Update Center | System Cleanup |
-|:----------------:|:-------------:|:--------------:|
-| `screenshots/health.png` | `screenshots/updates.png` | `screenshots/cleanup.png` |
+- 🏛️ **Pacman** — official Arch repos
+- 🔧 **AUR** — via `yay` or `paru`
+- 📦 **Flatpak** — any remote
 
 ---
 
 ## 🚀 Features
 
-<table>
-  <tr>
-    <td>🔍 <b>Unified Search</b></td>
-    <td>Search Pacman, AUR (via HTTP API), and Flatpak — in parallel, in one list</td>
-  </tr>
-  <tr>
-    <td>📋 <b>Browse Installed</b></td>
-    <td>All packages, official, AUR/foreign, Flatpak, explicitly installed, deps, orphans</td>
-  </tr>
-  <tr>
-    <td>⬇️ <b>Install</b></td>
-    <td>Pacman, AUR (yay/paru/trizen), Flatpak — with optional confirmation dialogs</td>
-  </tr>
-  <tr>
-    <td>🗑️ <b>Remove</b></td>
-    <td>Auto-detects source, runs <code>pacman -Rns</code> — removes deps and configs</td>
-  </tr>
-  <tr>
-    <td>🔄 <b>Update Center</b></td>
-    <td>Check and apply updates for each source independently or all at once</td>
-  </tr>
-  <tr>
-    <td>ℹ️ <b>Package Info</b></td>
-    <td>Version, repo, size, install date, packager, dependencies, required-by</td>
-  </tr>
-  <tr>
-    <td>🌳 <b>Dependency Explorer</b></td>
-    <td><code>pactree</code> integration — visual dependency tree + reverse-dep lookup</td>
-  </tr>
-  <tr>
-    <td>🩺 <b>Health Dashboard</b></td>
-    <td>Orphan count, broken packages (pacman -Qk), foreign package list</td>
-  </tr>
-  <tr>
-    <td>🧹 <b>System Cleanup</b></td>
-    <td>Remove orphans, clean pacman/AUR/Flatpak caches — one click</td>
-  </tr>
-  <tr>
-    <td>📊 <b>Statistics</b></td>
-    <td>Total packages, per-source counts, install size, available updates</td>
-  </tr>
-  <tr>
-    <td>⚙️ <b>Settings</b></td>
-    <td>AUR helper, confirm dialogs, cache TTL — configured right inside the app</td>
-  </tr>
-  <tr>
-    <td>🎨 <b>Custom Rofi Theme</b></td>
-    <td>Dark theme bundled: <code>#0d1117</code> bg, <code>#58a6ff</code> accent, JetBrains Mono</td>
-  </tr>
-</table>
+| Feature | Details |
+|--------|---------|
+| 🔍 **Unified Search** | Searches Pacman, AUR (HTTP API — no helper needed), and Flatpak **in parallel** |
+| 📋 **Browse Installed** | All packages, official, AUR/foreign, Flatpak, explicit, dependency-only, orphans |
+| ⬇️ **Install** | Pacman, AUR helper (`yay`/`paru`/`trizen`), Flatpak — with optional confirm dialogs |
+| 🗑️ **Remove** | Auto-detects source — runs `pacman -Rns` (removes deps + config files) |
+| 🔄 **Update Center** | Check and apply updates for each source independently, or all at once |
+| ℹ️ **Package Info** | Version, repo, size, install date, packager, dependencies, required-by |
+| 🌳 **Dependency Explorer** | `pactree` integration — visual tree + reverse-dependency lookup |
+| 🩺 **Health Dashboard** | Orphan count, broken packages (`pacman -Qk`), foreign package list |
+| 🧹 **System Cleanup** | Remove orphans, clean pacman / AUR / Flatpak caches — one click |
+| 📊 **Statistics** | Per-source package counts, total install size, pending update count |
+| ⚙️ **Settings** | AUR helper, confirm dialogs, cache TTL — all editable inside the app |
+| 🎨 **Bundled Theme** | Dark Rofi theme: `#0d1117` background, `#58a6ff` accent, JetBrains Mono |
 
 ---
 
@@ -121,35 +102,27 @@ One interface to rule:
 ### Required
 | Package | Why |
 |---------|-----|
-| `python3` (3.10+) | The whole app is Python |
+| `python3` ≥ 3.10 | The entire app is Python |
 | `rofi` | The UI layer |
 | `pacman` | Core package management |
 
 ### Recommended
-| Package | Why |
-|---------|-----|
-| `yay` or `paru` | AUR install, remove, update |
-| `flatpak` | Flatpak support |
-| `pacman-contrib` | Provides `checkupdates` (safe update checking) and `pactree` (dep trees) |
-| `expac` | Package size stats |
+| Package | Install | Why |
+|---------|---------|-----|
+| `yay` or `paru` | AUR | AUR install, remove, update |
+| `flatpak` | `sudo pacman -S flatpak` | Flatpak support |
+| `pacman-contrib` | `sudo pacman -S pacman-contrib` | `checkupdates` + `pactree` |
+| `expac` | `sudo pacman -S expac` | Package size statistics |
 
 ### Optional
 | Package | Why |
 |---------|-----|
 | `polkit` | Graphical `pkexec` for privilege escalation |
-| `snap` | Snap package detection |
-
-Install the recommended extras in one shot:
-```bash
-sudo pacman -S pacman-contrib expac
-yay -S expac  # if expac isn't in your repos
-```
+| `snap` + `snapd` | Snap package detection |
 
 ---
 
 ## ⚡ Installation
-
-### Clone & Install
 
 ```bash
 git clone https://github.com/Mohit-Bhole/RofiBasedPackageManager.git
@@ -158,34 +131,40 @@ chmod +x install.sh
 ./install.sh
 ```
 
-The installer will:
-- Copy the project to `/usr/local/lib/rofi-package-manager/`
-- Symlink the launcher to `/usr/local/bin/rofi-package-manager`
-- Create a default config at `~/.config/rofi-package-manager/config.json`
+The installer:
+- Copies the project to `/usr/local/lib/rofi-package-manager/`
+- Symlinks the launcher → `/usr/local/bin/rofi-package-manager`
+- Creates a default config at `~/.config/rofi-package-manager/config.json`
 
-### Run
+### Run it
 
 ```bash
 rofi-package-manager
 ```
 
-Or bind it to a key in your window manager / compositor. For example in **Hyprland**:
+Or bind it to a hotkey. Examples:
 
+**Hyprland** (`hyprland.conf`):
 ```ini
 bind = $mainMod, P, exec, rofi-package-manager
 ```
 
-Or add it to a custom Rofi modi list:
+**i3 / Sway** (`config`):
+```
+bindsym $mod+p exec rofi-package-manager
+```
 
-```bash
-rofi -show combi -combi-modi "drun,rofi-package-manager"
+**bspwm** (`sxhkdrc`):
+```
+super + p
+    rofi-package-manager
 ```
 
 ---
 
 ## ⚙️ Configuration
 
-Config file lives at: `~/.config/rofi-package-manager/config.json`
+Config file: `~/.config/rofi-package-manager/config.json`
 
 ```json
 {
@@ -201,69 +180,69 @@ Config file lives at: `~/.config/rofi-package-manager/config.json`
 
 | Key | Default | Description |
 |-----|---------|-------------|
-| `aur_helper` | `"yay"` | AUR helper to use (`yay`, `paru`, `trizen`) |
+| `aur_helper` | `"yay"` | AUR helper binary (`yay`, `paru`, `trizen`) |
 | `show_descriptions` | `true` | Show package descriptions in search results |
 | `confirm_removal` | `true` | Yes/No dialog before removing a package |
 | `confirm_install` | `true` | Yes/No dialog before installing a package |
 | `cache_ttl_seconds` | `300` | How long to cache package lists (seconds) |
-| `theme` | `"default"` | Rofi theme file name (in `themes/`) |
+| `theme` | `"default"` | Rofi theme name (filename inside `themes/`) |
 | `terminal` | `null` | Override terminal emulator (auto-detected if null) |
 
-> All settings are also editable live from within the app under **⚙ Settings**.
+> All settings are also editable live from **⚙ Settings** inside the app.
 
 ---
 
 ## 🏗️ Architecture
 
-The project is intentionally modular — `main.py` only handles menu navigation. All logic is in separate modules.
+`main.py` handles **only menus and navigation**. All logic lives in separate modules.
 
 ```
 rofi_package_manager/
 │
-├── main.py                  # Entry point — menus & routing ONLY
+├── main.py                  # Entry point — routing ONLY, zero business logic
 │
 ├── modules/
-│   ├── search.py            # Parallel search: Pacman, AUR API, Flatpak
+│   ├── search.py            # Parallel search: Pacman, AUR HTTP API, Flatpak
 │   ├── install.py           # Install via pacman / AUR helper / flatpak
 │   ├── remove.py            # Remove with auto source-detection
 │   ├── update.py            # Check + apply updates for all sources
-│   ├── info.py              # Package info, dep trees, system stats
+│   ├── info.py              # Package info, dependency trees, system stats
 │   ├── source.py            # detect_source() — which PM owns a package?
 │   ├── health.py            # Orphans, integrity check, health dashboard
 │   └── cleanup.py           # Cache cleaning, orphan removal
 │
 ├── utils/
-│   ├── rofi.py              # ALL Rofi subprocess calls (single source of truth)
+│   ├── rofi.py              # ALL Rofi subprocess calls — single source of truth
 │   ├── commands.py          # run_command, run_privileged, tool_available
 │   └── cache.py             # Two-level TTL cache (memory + disk)
 │
 ├── config/
-│   └── settings.py          # ~/.config/rofi-package-manager/config.json
+│   └── settings.py          # Reads/writes ~/.config/rofi-package-manager/config.json
 │
 ├── themes/
 │   └── default.rasi         # Bundled dark Rofi theme
 │
 ├── rofi-package-manager     # Executable launcher (symlinked to /usr/local/bin)
-└── install.sh               # System installer
+└── install.sh               # System installer script
 ```
 
-### Design Rules
+### Design Principles
 
 - **`main.py` has zero business logic** — it only routes menu choices to modules
-- **All Rofi calls go through `utils/rofi.py`** — nothing else calls subprocess with `rofi`
+- **All Rofi calls go through `utils/rofi.py`** — nothing else calls subprocess with `rofi` directly
 - **`BACK` / `EXIT` sentinels** are defined once, imported everywhere — never hardcoded strings
 - **Cache is invalidated by the module that mutates state** — install/remove/update each clear their own keys
-- **AUR search uses the HTTP API** — no AUR helper needed just to search
+- **AUR search uses the HTTP API** — `urllib` only, no external dependencies, no AUR helper needed to search
 
 ---
 
 ## 🔐 Privilege Escalation
 
-Install, remove, and update operations that need `sudo` open a **real terminal window**. You type your password there, naturally, and the window closes when done.
+Install, remove, and update operations that need `sudo` open a **real terminal window**. You type your password there naturally, the terminal closes when done.
 
 Resolution order:
 1. `pkexec` (polkit graphical dialog) — if available
-2. Auto-detected terminal emulator (`kitty` → `alacritty` → `xterm` → `gnome-terminal`)
+2. Auto-detected terminal: `kitty` → `alacritty` → `xterm` → `gnome-terminal` → `konsole`
 
 No passwords are stored anywhere.
 
@@ -271,56 +250,56 @@ No passwords are stored anywhere.
 
 ## 💾 Caching
 
-Package lists are cached in `~/.cache/rofi-package-manager/` with a configurable TTL (default 5 minutes). This means navigating between menus is instant — no re-running `pacman -Q` every time.
+Package lists are cached under `~/.cache/rofi-package-manager/` with a configurable TTL (default 5 min). Navigation between menus is instant — no re-running `pacman -Q` every time.
 
-The cache has two levels:
-- **Memory** (fastest) — in-process dict, gone on exit
+**Two cache levels:**
+- **Memory** — in-process dict, fastest, gone on exit
 - **Disk** — JSON files, persists between launches, respects TTL
 
-Clear anytime from **⚙ Settings → Clear Package Cache**.
+Clear anytime: **⚙ Settings → Clear Package Cache**
 
 ---
 
 ## 🗺️ Roadmap
 
-- [x] Unified Pacman + AUR + Flatpak search
-- [x] Package info card with full metadata
+- [x] Unified Pacman + AUR + Flatpak search (parallel)
+- [x] Full package info card with metadata
 - [x] Dependency tree explorer (`pactree`)
-- [x] Health dashboard (orphans, broken packages)
-- [x] System cleanup (caches + orphans)
+- [x] Health dashboard — orphans, broken packages
+- [x] System cleanup — caches + orphan removal
 - [x] Statistics screen
 - [x] Two-level TTL cache
 - [x] Custom bundled Rofi theme
 - [ ] Snap support
 - [ ] Cargo package listing
-- [ ] AUR package submission helper
-- [ ] Rofi `modi` integration (show as a rofi mode, not a separate window)
+- [ ] Rofi `modi` integration
 - [ ] AUR PKGBUILD viewer
 - [ ] Package changelog viewer
+- [ ] AUR package on GitHub → submit to AUR helper
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome! If you want to add support for a new package manager or improve existing modules:
+PRs welcome! To add a new package manager or feature:
 
 1. Fork the repo
 2. Create a feature branch: `git checkout -b feature/snap-support`
-3. Follow the architecture rules above (especially: keep `main.py` logic-free)
-4. Open a PR
+3. Keep `main.py` logic-free — add a new module in `modules/`
+4. Open a PR with screenshots if it changes the UI
 
 ---
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) for details.
+[MIT](LICENSE) © 2026 Mohit Bhole
 
 ---
 
 <div align="center">
 
-**Built for Arch Linux power users who love Rofi.**
+**Built for Arch Linux power users who live in Rofi.**
 
-_If this project helped you, consider leaving a ⭐_
+*If this helped you — drop a ⭐ It means a lot.*
 
 </div>
