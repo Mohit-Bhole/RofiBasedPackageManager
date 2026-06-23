@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+*.egg-link
+.installed.cfg
+lib/
+lib64/
+
+# Runtime cache
+.cache/
+
+# Config (user-specific, don't track)
+# ~/.config/rofi-package-manager/ is outside the repo anyway
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Screenshots placeholder (user adds real ones)
+# screenshots/*.png  ← uncomment if you want to ignore screenshots
+
+# Environment
+.env
+.venv/
+env/
+venv/

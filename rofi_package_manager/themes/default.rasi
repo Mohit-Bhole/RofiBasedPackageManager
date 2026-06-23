@@ -1,0 +1,178 @@
+/**
+ * default.rasi
+ * ────────────
+ * Rofi theme for rofi-package-manager.
+ * Dark background, accent blue, clean monospaced feel.
+ *
+ * Place in: themes/default.rasi
+ * Applied via: rofi -theme /path/to/default.rasi
+ */
+
+* {
+    /* ── Colour Palette ────────────────────────────────────── */
+    bg0:       #0d1117;      /* window background        */
+    bg1:       #161b22;      /* input / element bg       */
+    bg2:       #21262d;      /* selected element bg      */
+    bg3:       #30363d;      /* border / separator       */
+
+    accent:    #58a6ff;      /* selection highlight      */
+    accent2:   #1f6feb;      /* scrollbar / urgent       */
+
+    fg0:       #e6edf3;      /* primary text             */
+    fg1:       #8b949e;      /* secondary / placeholder  */
+    fg2:       #3d444d;      /* disabled                 */
+
+    ok:        #3fb950;      /* green — success          */
+    warn:      #d29922;      /* yellow — warning         */
+    danger:    #f85149;      /* red — error / removal    */
+
+    /* ── Reset ─────────────────────────────────────────────── */
+    background-color: transparent;
+    text-color:       @fg0;
+    border:           0;
+    margin:           0;
+    padding:          0;
+    spacing:          0;
+}
+
+/* ── Window ──────────────────────────────────────────────────── */
+window {
+    background-color: @bg0;
+    border:           2px solid;
+    border-color:     @bg3;
+    border-radius:    12px;
+    width:            680px;
+    padding:          0;
+}
+
+/* ── Main layout ─────────────────────────────────────────────── */
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, message, listview ];
+    spacing:          0;
+    padding:          0;
+}
+
+/* ── Input bar (prompt + search field) ──────────────────────── */
+inputbar {
+    background-color: @bg1;
+    border-radius:    10px 10px 0 0;
+    border:           0 0 1px 0;
+    border-color:     @bg3;
+    padding:          14px 16px;
+    spacing:          10px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    font:             "JetBrains Mono 10";
+    padding:          0 6px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg0;
+    placeholder:      "Type to filter…";
+    placeholder-color: @fg2;
+    font:             "JetBrains Mono 10";
+}
+
+/* ── Optional message bar ────────────────────────────────────── */
+message {
+    background-color: @bg1;
+    border:           0 0 1px 0;
+    border-color:     @bg3;
+    padding:          6px 16px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @fg1;
+    font:             "JetBrains Mono 9";
+}
+
+/* ── List view ───────────────────────────────────────────────── */
+listview {
+    background-color: transparent;
+    padding:          8px 0;
+    spacing:          2px;
+    fixed-height:     false;
+    lines:            16;
+    columns:          1;
+    scrollbar:        true;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+scrollbar {
+    width:            4px;
+    border:           0;
+    handle-color:     @bg3;
+    handle-width:     4px;
+    padding:          0;
+    background-color: @bg1;
+}
+
+/* ── Individual list elements ────────────────────────────────── */
+element {
+    background-color: transparent;
+    text-color:       @fg0;
+    padding:          8px 16px;
+    border-radius:    6px;
+    margin:           0 6px;
+    spacing:          10px;
+    cursor:           pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg0;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color:       @danger;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color:       @accent;
+}
+
+element selected.normal {
+    background-color: @bg2;
+    text-color:       @accent;
+    border:           0 0 0 2px;
+    border-color:     @accent;
+    border-radius:    0 6px 6px 0;
+}
+
+element selected.urgent {
+    background-color: @bg2;
+    text-color:       @danger;
+}
+
+element selected.active {
+    background-color: @bg2;
+    text-color:       @ok;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "JetBrains Mono 10";
+    vertical-align:   0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             1.2em;
+}
+
+/* ── No-results message ──────────────────────────────────────── */
+error-message {
+    background-color: @bg0;
+    border-radius:    12px;
+    padding:          20px;
+}

@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# rofi-package-manager
+# ─────────────────────
+# Launcher script. Symlink this to /usr/local/bin/rofi-package-manager
+# so it can be run from anywhere.
+
+import sys
+import os
+
+# Resolve the real location of this launcher script (handles symlinks)
+_SCRIPT = os.path.realpath(__file__)
+_PKG_ROOT = os.path.dirname(_SCRIPT)
+
+# Add the package root to Python path
+if _PKG_ROOT not in sys.path:
+    sys.path.insert(0, _PKG_ROOT)
+
+from main import main
+
+if __name__ == "__main__":
+    main()
