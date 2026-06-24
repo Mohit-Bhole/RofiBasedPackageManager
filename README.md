@@ -25,7 +25,7 @@ Manage Pacman, AUR, and Flatpak packages from a single keyboard-driven Rofi inte
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
@@ -37,27 +37,27 @@ Manage Pacman, AUR, and Flatpak packages from a single keyboard-driven Rofi inte
 </td>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/pkg_info.png" width="100%" alt="Package Info"/>
-<br/><sub><b>ℹ️ Package Info Card</b></sub>
+<br/><sub><b>Package Info Card</b></sub>
 </td>
 </tr>
 <tr>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/updates.png" width="100%" alt="Update Center"/>
-<br/><sub><b>🔄 Update Center</b></sub>
+<br/><sub><b>Update Center</b></sub>
 </td>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/health.png" width="100%" alt="Health Dashboard"/>
-<br/><sub><b>🩺 Health Dashboard</b></sub>
+<br/><sub><b>Health Dashboard</b></sub>
 </td>
 </tr>
 <tr>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/cleanup.png" width="100%" alt="System Cleanup"/>
-<br/><sub><b>🧹 System Cleanup</b></sub>
+<br/><sub><b>System Cleanup</b></sub>
 </td>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/main_menu.png" width="100%" alt="Main Menu"/>
-<br/><sub><b>📦 Main Menu</b></sub>
+<br/><sub><b>Main Menu</b></sub>
 </td>
 </tr>
 </table>
@@ -66,38 +66,38 @@ Manage Pacman, AUR, and Flatpak packages from a single keyboard-driven Rofi inte
 
 ---
 
-## ✨ What is this?
+## What is this?
 
 You launch **`rofi-package-manager`** and you get a full package management dashboard — right inside Rofi. No terminal. No typing commands. No forgetting flags.
 
 One interface for:
 
-- 🏛️ **Pacman** — official Arch repos
-- 🔧 **AUR** — via `yay` or `paru`
-- 📦 **Flatpak** — any remote
+- **Pacman** — official Arch repos
+- **AUR** — via `yay` or `paru`
+- **Flatpak** — any remote
 
 ---
 
-## 🚀 Features
+## Features
 
 | Feature | Details |
 |--------|---------|
-| 🔍 **Unified Search** | Searches Pacman, AUR (HTTP API — no helper needed), and Flatpak **in parallel** |
-| 📋 **Browse Installed** | All packages, official, AUR/foreign, Flatpak, explicit, dependency-only, orphans |
-| ⬇️ **Install** | Pacman, AUR helper (`yay`/`paru`/`trizen`), Flatpak — with optional confirm dialogs |
-| 🗑️ **Remove** | Auto-detects source — runs `pacman -Rns` (removes deps + config files) |
-| 🔄 **Update Center** | Check and apply updates for each source independently, or all at once |
-| ℹ️ **Package Info** | Version, repo, size, install date, packager, dependencies, required-by |
-| 🌳 **Dependency Explorer** | `pactree` integration — visual tree + reverse-dependency lookup |
-| 🩺 **Health Dashboard** | Orphan count, broken packages (`pacman -Qk`), foreign package list |
-| 🧹 **System Cleanup** | Remove orphans, clean pacman / AUR / Flatpak caches — one click |
-| 📊 **Statistics** | Per-source package counts, total install size, pending update count |
-| ⚙️ **Settings** | AUR helper, confirm dialogs, cache TTL — all editable inside the app |
-| 🎨 **Bundled Theme** | Dark Rofi theme: `#0d1117` background, `#58a6ff` accent, JetBrains Mono |
+|  **Unified Search** | Searches Pacman, AUR (HTTP API — no helper needed), and Flatpak **in parallel** |
+|  **Browse Installed** | All packages, official, AUR/foreign, Flatpak, explicit, dependency-only, orphans |
+|  **Install** | Pacman, AUR helper (`yay`/`paru`/`trizen`), Flatpak — with optional confirm dialogs |
+|  **Remove** | Auto-detects source — runs `pacman -Rns` (removes deps + config files) |
+|  **Update Center** | Check and apply updates for each source independently, or all at once |
+|  **Package Info** | Version, repo, size, install date, packager, dependencies, required-by |
+|  **Dependency Explorer** | `pactree` integration — visual tree + reverse-dependency lookup |
+|  **Health Dashboard** | Orphan count, broken packages (`pacman -Qk`), foreign package list |
+|  **System Cleanup** | Remove orphans, clean pacman / AUR / Flatpak caches — one click |
+|  **Statistics** | Per-source package counts, total install size, pending update count |
+|  **Settings** | AUR helper, confirm dialogs, cache TTL — all editable inside the app |
+|  **Bundled Theme** | Dark Rofi theme: `#0d1117` background, `#58a6ff` accent, JetBrains Mono |
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ### Required
 | Package | Why |
@@ -122,7 +122,7 @@ One interface for:
 
 ---
 
-## ⚡ Installation
+## Installation
 
 ```bash
 git clone https://github.com/Mohit-Bhole/RofiBasedPackageManager.git
@@ -162,7 +162,7 @@ super + p
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Config file: `~/.config/rofi-package-manager/config.json`
 
@@ -192,7 +192,7 @@ Config file: `~/.config/rofi-package-manager/config.json`
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 `main.py` handles **only menus and navigation**. All logic lives in separate modules.
 
@@ -236,7 +236,7 @@ rofi_package_manager/
 
 ---
 
-## 🔐 Privilege Escalation
+## Privilege Escalation
 
 Install, remove, and update operations that need `sudo` open a **real terminal window**. You type your password there naturally, the terminal closes when done.
 
@@ -248,7 +248,7 @@ No passwords are stored anywhere.
 
 ---
 
-## 💾 Caching
+## Caching
 
 Package lists are cached under `~/.cache/rofi-package-manager/` with a configurable TTL (default 5 min). Navigation between menus is instant — no re-running `pacman -Q` every time.
 
@@ -260,7 +260,7 @@ Clear anytime: **⚙ Settings → Clear Package Cache**
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [x] Unified Pacman + AUR + Flatpak search (parallel)
 - [x] Full package info card with metadata
@@ -279,7 +279,7 @@ Clear anytime: **⚙ Settings → Clear Package Cache**
 
 ---
 
-## 🤝 Contributing
+## Cntributing
 
 PRs welcome! To add a new package manager or feature:
 
@@ -290,7 +290,7 @@ PRs welcome! To add a new package manager or feature:
 
 ---
 
-## 📄 License
+## License
 
 [MIT](LICENSE) © 2026 Mohit Bhole
 
