@@ -33,7 +33,7 @@ Manage Pacman, AUR, and Flatpak packages from a single keyboard-driven Rofi inte
 <tr>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/search.png" width="100%" alt="Package Search"/>
-<br/><sub><b>🔍 Unified Package Search</b></sub>
+<br/><sub><b>Unified Package Search</b></sub>
 </td>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/pkg_info.png" width="100%" alt="Package Info"/>
