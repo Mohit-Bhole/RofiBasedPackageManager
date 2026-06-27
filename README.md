@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Mohit-Bhole/RofiBasedPackageManager/main/screenshots/main_menu.png" width="700" alt="Rofi Package Manager — Main Menu"/>
+<img src="https://github.com/Mohit-Bhole/RofiBasedPackageManager/blob/8bf2306b6c1cd59d4b354c517018d7bf139c8c2c/screenshots/main_menu.png" width="700" alt="Rofi Package Manager — Main Menu"/>
 
 <h1>Rofi Package Manager</h1>
 
